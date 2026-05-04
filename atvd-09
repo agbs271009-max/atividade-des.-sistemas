@@ -1,0 +1,22 @@
+const usuarioCorreto = "admin";
+const senhaCorreta = "1234";
+let logado = false;
+
+for (let tentativa = 1; tentativa <= 3; tentativa++) {
+    let usuarioInput = prompt(`Tentativa ${tentativa} de 3\nDigite o usuário:`);
+    let senhaInput = prompt("Digite a senha:");
+
+    if (usuarioInput === usuarioCorreto && senhaInput === senhaCorreta) {
+        alert("Login realizado com sucesso! Bem-vindo.");
+        logado = true;
+        break; 
+    } else {
+        if (tentativa < 3) {
+            alert("Usuário ou senha incorretos. Tente novamente.");
+        }
+    }
+}
+
+if (!logado) {
+    alert("Acesso bloqueado! Você excedeu o limite de 3 tentativas.");
+}

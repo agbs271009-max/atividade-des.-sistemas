@@ -1,0 +1,15 @@
+let soma = 0;
+let numero;
+
+console.log("Digite os números para somar. Digite 0 para encerrar e ver o total.");
+
+while (numero !== 0) {
+    numero = parseFloat(prompt("Digite um número (ou 0 para sair):"));
+
+    if (!isNaN(numero)) {
+        soma += numero; 
+        alert("Por favor, digite apenas números.");
+    }
+}
+
+alert(`A soma total de todos os números digitados é: ${soma}`);

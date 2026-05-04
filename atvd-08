@@ -1,0 +1,13 @@
+let quantidadePositivos = 0;
+
+console.log("Por favor, digite 5 números:");
+
+for (let i = 1; i <= 5; i++) {
+    let numero = parseFloat(prompt(`Digite o ${i}º número:`));
+
+    if (numero > 0) {
+        quantidadePositivos++; 
+    }
+}
+
+alert(`Você digitou ${quantidadePositivos} número(s) positivo(s).`);
